@@ -1,0 +1,2 @@
+kafka:
+  bootstrapAddres: "localhost:9092"
