@@ -3,6 +3,7 @@ package com.example.kafkaap.config;
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.kafka.clients.admin.AdminClientConfig;
+import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,4 +22,18 @@ public class KafkaTopicConfig {
         return new KafkaAdmin(configs);
     }
 
+    @Bean
+    public NewTopic emailMessageTopicLow() {
+        return new NewTopic("emailMessageTopicLow", 1, (short) 1);
+    }
+
+//    @Bean
+//    public NewTopic emailMessageTopicMedium() {
+//        return new NewTopic("emailMessageTopicMedium", 1, (short) 1);
+//    }
+//
+//    @Bean
+//    public NewTopic emailMessageTopicHigh() {
+//        return new NewTopic("emailMessageTopicHigh", 1, (short) 1);
+//    }
 }

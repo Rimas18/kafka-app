@@ -1,2 +1,5 @@
 kafka:
-  bootstrapAddres: "localhost:9092"
+  bootstrapAddress: "localhost:9092"
+
+server:
+  port: 8383
