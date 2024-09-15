@@ -1,5 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres  # Your PostgreSQL connection
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration  # Location where Flyway looks for migration scripts
+    baseline-on-migrate: true  # Ensures Flyway can start on existing databases without migrations
+
 kafka:
-  bootstrapAddress: "localhost:9092"
+  bootstrapAddress: localhost:9092
 
 server:
   port: 8383
+
+logging:
+  level:
+    org.flywaydb: DEBUG

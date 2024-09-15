@@ -1,4 +1,4 @@
-package com.example.kafkaap.config;
+package com.example.kafkaapp.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,8 +23,8 @@ public class KafkaTopicConfig {
     }
 
     @Bean
-    public NewTopic emailMessageTopicLow() {
-        return new NewTopic("emailMessageTopicLow", 1, (short) 1);
+    public NewTopic customerTopic() {
+        return new NewTopic("customerTopic", 3, (short) 1);
     }
 
 //    @Bean
